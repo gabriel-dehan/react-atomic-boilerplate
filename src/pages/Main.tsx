@@ -1,10 +1,14 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { AnyRouter, RouterProvider } from "@tanstack/react-router";
+import { Suspense } from "react";
+
 // import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const queryClient = new QueryClient();
 
-type MainProps = { router: ReturnType<typeof createRouter> };
+type MainProps = {
+  router: AnyRouter;
+};
 
 const Main = ({ router }: MainProps) => {
   return (

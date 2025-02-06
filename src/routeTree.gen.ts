@@ -11,13 +11,13 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as HomeImport } from './routes/home'
+import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
-const HomeRoute = HomeImport.update({
-  id: '/home',
-  path: '/home',
+const IndexRoute = IndexImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -25,11 +25,11 @@ const HomeRoute = HomeImport.update({
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/home': {
-      id: '/home'
-      path: '/home'
-      fullPath: '/home'
-      preLoaderRoute: typeof HomeImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -38,33 +38,33 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/home': typeof HomeRoute
+  '/': typeof IndexRoute
 }
 
 export interface FileRoutesByTo {
-  '/home': typeof HomeRoute
+  '/': typeof IndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/home': typeof HomeRoute
+  '/': typeof IndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/home'
+  fullPaths: '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/home'
-  id: '__root__' | '/home'
+  to: '/'
+  id: '__root__' | '/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  HomeRoute: typeof HomeRoute
+  IndexRoute: typeof IndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  HomeRoute: HomeRoute,
+  IndexRoute: IndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -77,11 +77,11 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/home"
+        "/"
       ]
     },
-    "/home": {
-      "filePath": "home.ts"
+    "/": {
+      "filePath": "index.ts"
     }
   }
 }

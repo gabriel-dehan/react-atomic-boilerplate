@@ -1,14 +1,31 @@
-import { StrictMode, Suspense } from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { createRouter } from "@tanstack/react-router";
+import { createRouter, Link } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
+import "@utils/i18n";
 import Main from "./pages/Main.tsx";
+import Loader from "@components/atoms/Loader/Loader";
 
 // Global styles
 import "@assets/styles/global.css";
 
 // Create a new router instance
-const router = createRouter({ routeTree });
+const router = createRouter({
+  routeTree,
+  ...{
+    defaultPendingComponent: () => {
+      return <Loader />;
+    },
+    defaultNotFoundComponent: () => {
+      return (
+        <div>
+          <p>Not found!</p>
+          <Link to="/">Go home</Link>
+        </div>
+      );
+    },
+  },
+});
 declare module "@tanstack/react-router" {
   interface Register {
     // Infers the type of our router and registers it across your entire project
@@ -24,9 +41,7 @@ if (!rootElement.innerHTML) {
 
   root.render(
     <StrictMode>
-      <Suspense fallback="loading">
-        <Main router={router} />
-      </Suspense>
+      <Main router={router} />
     </StrictMode>,
   );
 }
