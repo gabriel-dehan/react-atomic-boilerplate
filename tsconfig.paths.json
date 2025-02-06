@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@features/*": ["./src/features/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@graphql/*": ["./src/graphql/*"],
+      "@generated/*": ["./src/generated/*"],
+      "@router/*": ["./src/router/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@services/*": ["./src/services/*"]
+    }
+  }
+}
