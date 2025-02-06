@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "generate-routes": "yarn router generate",
     "lint": "eslint --max-warnings 0",
     "lint:fix": "eslint --max-warnings 0 --fix"
   },
@@ -56,6 +57,7 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.23.0",
     "vite": "^6.1.0",
-    "vite-plugin-static-copy": "^2.2.0"
+    "vite-plugin-static-copy": "^2.2.0",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
