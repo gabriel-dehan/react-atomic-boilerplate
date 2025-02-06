@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { createRouter, Link } from "@tanstack/react-router";
+import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 import "@utils/i18n";
-import Main from "./pages/Main.tsx";
+import Main from "@pages/Main.tsx";
 import Loader from "@components/atoms/Loader/Loader";
+import NotFound from "@pages/NotFound/NotFound";
 
 // Global styles
 import "@assets/styles/global.css";
@@ -17,12 +18,7 @@ const router = createRouter({
       return <Loader />;
     },
     defaultNotFoundComponent: () => {
-      return (
-        <div>
-          <p>Not found!</p>
-          <Link to="/">Go home</Link>
-        </div>
-      );
+      return <NotFound />;
     },
   },
 });
