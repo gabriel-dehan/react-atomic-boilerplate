@@ -135,6 +135,7 @@ This boilerplate isn't opinionated about where and how to deploy, but a simple o
 
 If you want to deploy to github pages, you can will need to [setup a few things](https://github.com/rafgraph/spa-github-pages):
 
+Add this script in `index.html`:
 ```html
 <!-- GitHub Pages SPA routing handler -->
 <script type="text/javascript">
