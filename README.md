@@ -17,7 +17,7 @@ An opinionated boilerplate for building React applications using Atomic Design p
 - React Hook Form for form handling
 
 ### UI
-- [Base UI](https://base-ui.com/react/overview/quick-start) for existing components
+- [Base UI](https://base-ui.com/react/overview/quick-start) to have a solid, unstyled foundation for our components
 - [Radix UI Colors](https://www.radix-ui.com/colors/docs/overview/usage) for color palette and easy light / dark mode toggle
 
 Comes with two fonts by default:
