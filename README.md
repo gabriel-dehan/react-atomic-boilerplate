@@ -75,7 +75,7 @@ Example:
 
 ## Aliases
 
-We use aliases to make our code more readable.
+A few aliases are defined to make our imports more readable and our life easier.
 
 Example:
 ```ts
