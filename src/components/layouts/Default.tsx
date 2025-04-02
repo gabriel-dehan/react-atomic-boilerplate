@@ -1,18 +1,21 @@
 import { Outlet } from "@tanstack/react-router";
-import Navigation from "@components/organisms/Navigation/Navigation";
-import Footer from "@components/organisms/Footer/Footer";
 import { Suspense } from "react";
+
 import Loader from "@components/atoms/Loader/Loader";
+import Header from "@src/components/organisms/Header/Header";
+
+import "./Default.css";
+
 const Default = () => {
   return (
-    <div>
-      <Navigation />
-      <main>
+    <div className="Root">
+      <Header />
+      <main className="page-content">
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

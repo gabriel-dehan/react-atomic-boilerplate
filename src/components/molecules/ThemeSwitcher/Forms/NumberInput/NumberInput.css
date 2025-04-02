@@ -1,0 +1,110 @@
+/* https://base-ui.com/react/components/number-field */
+
+.number-input {
+  width: 100%;
+}
+
+.number-input__scrub-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  cursor: ew-resize;
+}
+
+.number-input__label {
+  font-size: 14px;
+  color: var(--component-text-color);
+  user-select: none;
+}
+
+.number-input__scrub-cursor {
+  display: none;
+}
+
+.number-input[data-scrubbing] .number-input__scrub-cursor {
+  display: block;
+}
+
+.number-input__group {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--gray-7);
+  background-color: var(--component-background-color);
+  overflow: hidden;
+}
+
+.number-input__input {
+  flex: 1;
+  padding: 8px 12px;
+  appearance: none;
+  font-size: 14px;
+  background: transparent;
+  color: var(--component-text-color);
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 100%;
+}
+
+.number-input__input::-webkit-inner-spin-button,
+.number-input__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-input__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.number-input__decrement,
+.number-input__increment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 32px;
+  height: 32px; */
+  cursor: pointer;
+  background-color: var(--gray-3);
+  color: var(--gray-11);
+  border: none;
+  outline: none;
+}
+
+.number-input__decrement:hover,
+.number-input__increment:hover {
+  background-color: var(--gray-4);
+}
+
+.number-input__decrement:active,
+.number-input__increment:active {
+  background-color: var(--gray-5);
+}
+
+.number-input[data-focused] .number-input__group {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.number-input[data-disabled] {
+  opacity: 0.5;
+}
+
+.number-input[data-disabled] .number-input__group {
+  cursor: not-allowed;
+}
+
+.number-input[data-disabled] .number-input__input,
+.number-input[data-disabled] .number-input__decrement,
+.number-input[data-disabled] .number-input__increment {
+  pointer-events: none;
+}
+
+.number-input[data-invalid] .number-input__group {
+  border-color: var(--red-8);
+}
+
+.number-input[data-invalid][data-focused] .number-input__group {
+  outline-color: var(--red-8);
+}

@@ -1,14 +1,15 @@
+import Loader from "@components/atoms/Loader/Loader";
+import Main from "@pages/Main.tsx";
+import NotFound from "@pages/NotFound/NotFound";
+import { createRouter } from "@tanstack/react-router";
+import "@utils/i18n";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
-import "@utils/i18n";
-import Main from "@pages/Main.tsx";
-import Loader from "@components/atoms/Loader/Loader";
-import NotFound from "@pages/NotFound/NotFound";
 
 // Global styles
 import "@assets/styles/global.css";
+import "@assets/styles/theme.css";
 
 // Create a new router instance
 const router = createRouter({
@@ -30,7 +31,7 @@ declare module "@tanstack/react-router" {
 }
 
 // Render the app
-const rootElement = document.querySelector("#root") as Element;
+const rootElement = document.querySelector("#app") as Element;
 
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
@@ -38,6 +39,6 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <Main router={router} />
-    </StrictMode>,
+    </StrictMode>
   );
 }

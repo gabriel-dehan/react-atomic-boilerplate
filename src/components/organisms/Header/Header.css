@@ -1,0 +1,57 @@
+.org-header {
+  background-color: var(--gray-2);
+  border-bottom: 1px solid var(--gray-4);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+
+  &__logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__nav-item {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+
+    a {
+      border-bottom: 1px solid var(--plum-11);
+
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      font-weight: 400;
+
+      padding: 0 0.05rem;
+      line-height: 1.25rem;
+
+      &:hover {
+        border-bottom: 1px solid var(--plum-12);
+      }
+    }
+  }
+
+  &__nav-separator {
+    list-style: none;
+    width: 1px;
+    background-color: var(--gray-6);
+  }
+
+  &__switcher {
+  }
+}

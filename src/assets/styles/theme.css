@@ -1,0 +1,36 @@
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/gray-dark.css";
+
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/blue-dark.css";
+
+@import "@radix-ui/colors/sky.css";
+@import "@radix-ui/colors/sky-dark.css";
+
+@import "@radix-ui/colors/plum.css";
+@import "@radix-ui/colors/plum-dark.css";
+
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/green-dark.css";
+
+@import "@radix-ui/colors/red.css";
+@import "@radix-ui/colors/red-dark.css";
+
+:root {
+  --background-color: var(--gray-1);
+  --text-color: var(--gray-12);
+
+  --component-background-color: var(--gray-3);
+  --component-text-color: var(--gray-12);
+
+  --primary-color: var(--sky-8);
+  --primary-hover: var(--sky-7);
+}
+
+/* Dark theme specific styles */
+:root.dark-theme {
+}
+
+/* Light theme specific styles */
+:root.light-theme {
+}
