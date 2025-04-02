@@ -8,6 +8,7 @@ An opinionated boilerplate for building React applications using Atomic Design p
 - Vite for bundling
 - React
 - TypeScript
+- I18Next for i18n
 
 ### Routing, data and state Management
 - Tanstack Router for routing
