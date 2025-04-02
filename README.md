@@ -1,6 +1,6 @@
 # React / TypeScript / Vite Boilerplate
 
-An opinionated boilerplate for building React applications using Atomic Design principles and BEM.
+An opinionated boilerplate for building Typescript React applications leveraging [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) principles and [BEM](https://getbem.com) to structure our styles.
 
 ## Tech Stack
 
