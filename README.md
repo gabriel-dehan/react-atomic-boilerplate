@@ -83,16 +83,16 @@ import { Button } from "@components/atoms/Button";
 ```
 
 List of aliases:
-- @src: src folder
-- @types: types folder
-- @components: components folder
-- @pages: pages folder
-- @stores: stores folder
-- @assets: assets folder
-- @locales: locales folder
-- @utils: utils folder
-- @router: router folder
-- @hooks: hooks folder
+- `@src`: src folder
+- `@types`: types folder
+- `@components`: components folder
+- `@pages`: pages folder
+- `@stores`: stores folder
+- `@assets`: assets folder
+- `@locales`: locales folder
+- `@utils`: utils folder
+- `@router`: router folder
+- `@hooks`: hooks folder
 
 
 ## Linting and formatting
