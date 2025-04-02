@@ -210,6 +210,11 @@ git push origin main
 
 You will also need to go to your repository settings and set the GitHub Pages source to GitHub Actions.
 
+## Future improvements
+
+[ ] Create components for all Base UI elements.
+
+
 ## License WTFPL
 
 ```
